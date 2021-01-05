@@ -1,17 +1,38 @@
+// import react and react libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+
+
+function getButtonText(){
+    return "Click us!"
+}
+
+function getTime(){
+    return(new Date()).toLocaleTimeString()
+}
+
+
+
+
+// Create a component
+const App=()=>{
+    return(
+        <div className="">
+            <label className="label" htmlFor="name">Enter what : </label>
+            <input type="text" id="name"/>
+            <button style={{backgroundColor:'blue',color:'white'}}>{getButtonText()}</button>
+            <h1>Current time is</h1>
+            <div>{getTime()}</div>
+        </div>
+    )
+}
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App/>,
+    document.querySelector('#root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+// Take a react component and show it in the screen
