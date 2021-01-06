@@ -1,1 +1,1 @@
-## React projects created during self teaching react through various sources on internet
+## React projects created while self learning reactjs through various sources on internet
