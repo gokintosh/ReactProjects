@@ -1,39 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CommentDetail from './CommentDetails'
+import 'semantic-ui-css/semantic.min.css'
+import faker from 'faker'
+import ApprovalCard from './ApprovalCard'
+
 
 
 
 const App=()=>{
     return (
         <div className="ui container comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                <img alt="avatar" src='https://source.unsplash.com/random' />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 6:00PM</span>
-                    </div>
-                    <div className="text">this is comment 1</div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                <img alt="avatar" src='https://source.unsplash.com/random' />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Ram
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 6:00PM</span>
-                    </div>
-                    <div className="text">this is comment 1</div>
-                </div>
-            </div>
+            <ApprovalCard>
+                <CommentDetail author="jane" timeAgo="today at 5:45pm" commentText="Thanks for the post bro" avatar={faker.image.people()}/>
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail author="mubeen" timeAgo="today at 6:45pm" commentText="Your post is very helpfull" avatar={faker.image.people()}/>
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail author="gokul" timeAgo="today at 4:45pm" commentText="bro the post is really cool.." avatar={faker.image.people()}/>
+            </ApprovalCard>
         </div>
     )
 };
